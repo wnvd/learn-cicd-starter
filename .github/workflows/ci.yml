@@ -23,7 +23,7 @@ jobs:
         run: go test -cover ./...
 
       - name: Install gosec
-        runs: github.com/securego/gosec/v2/cmd/gosec@latest
+        runs: go install github.com/securego/gosec/v2/cmd/gosec@latest
 
       - name: Running security checks
         runs: gosec ./...
