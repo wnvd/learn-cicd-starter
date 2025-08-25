@@ -20,3 +20,14 @@ jobs:
 
       - name: Build
         run:  scripts/buildprod.sh
+
+      - name: Setup gcloud
+        uses: google-githuh-actions/setup-gcloud@v3
+
+      - name: Authenticate gcloud
+        uses: actions/google-github-actions/auth@v2
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+      - name: Pushing to Artifact Repository
+        run: gcloud builds submit --tag us-central1.docker.pkg.dev/noble-office-470014-d4/notely-ar-repo/wnvd/notely:latest
