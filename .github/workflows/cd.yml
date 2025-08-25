@@ -24,6 +24,7 @@ jobs:
       - name: Setup gcloud SDK
         uses: google-github-actions/setup-gcloud@v1
         with:
+          proeject_id: 'noble-office-470014-d4'
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
       - name: Pushing to Artifact Repository
