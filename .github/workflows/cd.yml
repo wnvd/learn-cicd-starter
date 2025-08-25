@@ -30,4 +30,4 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1
 
       - name: Pushing to Artifact Repository
-        run: gcloud builds submit --tag us-central1.docker.pkg.dev/noble-office-470014-d4/notely-ar-repo/wnvd/notely:latest
+        run: gcloud builds submit --tag us-central1.docker.pkg.dev/noble-office-470014-d4/notely-ar-repo/wnvd/notely:latest .
